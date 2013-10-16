@@ -622,16 +622,16 @@ object {
 
 .content-area {
 	float: left;
-	margin: 0 -33% 0 0;
+	margin: 0 -360px 0 0;
 	width: 100%;
 }
 .site-main {
-	margin: 0 33% 0 0;
+	margin: 0 360px 0 0;
 }
 .site-content .widget-area {
 	float: right;
 	overflow: hidden;
-	width: 33%;
+	width: 360px;
 }
 .site-footer {
 	clear: both;
@@ -647,7 +647,6 @@ object {
 
 body {
 	background-color: #f1f3f2;
-	/*font-family: 'Open Sans', sans-serif;*/
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -672,11 +671,35 @@ a:active {
 h1 {
 	color: #2e343a;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 36px;
+	font-size: 32px;
 	font-weight: 300;
-	line-height: 1.2em;
+	line-height: 1.3em;
 	margin: 0;
 	text-transform: capitalize;
+}
+
+	h1 a {
+		color: #2e343a;
+	}
+
+	h1 a:after {
+		content: " »";
+	}
+
+h1.page-title {
+	color: #c9c9c9;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+hr {
+	border-top: 1px solid rgba(0, 0, 0, .08);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7);
+	margin: 20px 0;
 }
 
 .page-container {
@@ -749,6 +772,16 @@ h1 {
 	box-sizing: border-box;
 }
 
+.main-navigation .menu li a:hover {
+	color: #fff;
+	background: #2e343a;
+	box-shadow: inset 0 1px 0 #444, inset 0 0 15px #000;
+}
+
+.main-navigation .menu li:first-child {
+	display: none;
+}
+
 #content {
 	padding-top: 40px;
 }
@@ -759,7 +792,7 @@ h1 {
 
 #secondary {
 	font-size: 12px;
-	padding-left: 40px;
+	padding-left: 60px;
 }
 
 #secondary .widget h1 {
@@ -774,7 +807,89 @@ h1 {
 	padding: 40px 0;
 }
 
-.posted-on {
+.posted-on, .byline, .logged-in-as, .entry-meta, .form-allowed-tags {
 	color: #999;
+	font-size: 13px;
+}
+
+.posted-on {
+	display: inline-block;
+	margin-bottom: 20px;
+	margin-top: 6px;
+}
+
+.form-allowed-tags code {
 	font-size: 12px;
+}
+
+.comment-respond h3, .comments-title {
+	color: #2e343a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	background-image: none;
+	font-size: 14px;
+}
+
+.comments-area, .comment-respond, .comment {
+	border-top: 1px solid rgba(0, 0, 0, .08);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7);
+
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+.comment-list {
+	margin-top: 20px;
+}
+
+.comment {
+	font-size: 12px;
+}
+
+.comment:first-child {
+	border: none;
+	box-shadow: none;
+}
+
+.comment-content {
+	font-size: 13px;
+	margin-top: 20px;
+}
+
+	.comment-content p {
+		margin-bottom: 1.3em;
+	}
+
+.comment-list {
+	counter-reset: li;
+}
+
+.comment-list li {
+	list-style: none;
+}
+
+.comment-list li:before {
+	color: #ddd;
+	content: counter(li); /* Use the counter as content */
+    counter-increment: li;
+    display: block;
+    font-size: 80px;
+    line-height: 1em;
+    margin-left: -110px;
+    margin-top: -13px;
+    overflow: hidden;
+    position: absolute;
+    text-align: right;
+    width: 90px;
+}
+
+cite.fn {
+	font-style: normal;
+	font-weight: 700;
 }
