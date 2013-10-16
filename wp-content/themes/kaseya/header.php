@@ -14,6 +14,8 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,300italic" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <?php wp_head(); ?>
 </head>
@@ -22,17 +24,24 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
+
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
+			<div class="page-container">
+				<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/kaseya-logo.png" alt="Kaseya logo" class="kaseya-logo"></a>
+			</div>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'kaseya' ); ?></h1>
-			<div class="skip-link"><a class="screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kaseya' ); ?></a></div>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="page-container">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</div>
 		</nav><!-- #site-navigation -->
+
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+		<div class="page-container">

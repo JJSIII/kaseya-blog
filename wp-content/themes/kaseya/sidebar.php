@@ -9,9 +9,9 @@
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
-			<aside id="search" class="widget widget_search">
+			<!-- <aside id="search" class="widget widget_search">
 				<?php get_search_form(); ?>
-			</aside>
+			</aside> -->
 
 			<aside id="archives" class="widget">
 				<h1 class="widget-title"><?php _e( 'Archives', 'kaseya' ); ?></h1>
@@ -31,3 +31,5 @@
 
 		<?php endif; // end sidebar widget area ?>
 	</div><!-- #secondary -->
+
+</div><!-- #.page-container -->

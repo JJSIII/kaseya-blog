@@ -10,14 +10,25 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'kaseya_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'kaseya' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'kaseya' ), 'Kaseya', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		<div class="page-container">
+
+			<footer id="colophon" class="site-footer" role="contentinfo">
+
+				<div class="site-info">
+					<?php do_action( 'kaseya_credits' ); ?>
+
+					&copy; 2000-2013 Kaseya Int'l Ltd.
+
+					<span class="sep"> | </span>
+
+					<a href="http://www.kaseya.com">www.kaseya.com</a>
+
+				</div><!-- .site-info -->
+
+			</footer><!-- #colophon -->
+
+		</div>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
